@@ -6,7 +6,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.use("/dashboard", function(req, res){
   console.log('loading dashboard');
-  res.sendFile(__dirname+"/dashboard.html");
+  res.sendFile(__dirname+"/main.html");
 });
 
 app.use("/", function(req, res){

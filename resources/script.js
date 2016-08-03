@@ -40,7 +40,7 @@ function main(){
       qHyperCubeDef:{
         qMeasures:[{
           qDef:{
-            qDef: "=Count(DISTINCT beer_beer_name)",
+            qDef: "=Count(DISTINCT Beer)",
             hideLabel: true
           }
         }],
@@ -71,7 +71,7 @@ function main(){
       qHyperCubeDef:{
         qMeasures:[{
           qDef:{
-            qDef: "=Count(DISTINCT brewery_brewery_name)",
+            qDef: "=Count(DISTINCT Brewery)",
             hideLabel: true
           }
         }],
@@ -102,12 +102,12 @@ function main(){
       qHyperCubeDef:{
         qDimensions:[{
           qDef:{
-            qFieldDefs:["beer_beer_style"]
+            qFieldDefs:["[Beer Style]"]
           }
         }],
         qMeasures:[{
           qDef:{
-            qDef: "=Sum(count)",
+            qDef: "=Count(DISTINCT checkin_id)",
             hideLabel: true
           },
           qSortBy: {
@@ -146,13 +146,13 @@ function main(){
       qHyperCubeDef:{
         qDimensions:[{
           qDef:{
-            qFieldDefs:["beer_beer_style"]
+            qFieldDefs:["[Beer Style]"]
           }
         }],
         qMeasures:[
           {
             qDef:{
-              qDef: "=Num(Avg(beer_auth_rating)/5,'#,##0.00')",
+              qDef: "=Num(Avg(Rating)/5,'#,##0.00')",
               hideLabel: true
             },
             qSortBy: {
@@ -161,7 +161,7 @@ function main(){
           },
           {
             qDef:{
-              qDef: "=Num(Avg(beer_auth_rating),'#,##0.00')",
+              qDef: "=Num(Avg(Rating),'#,##0.00')",
               hideLabel: true
             },
             qSortBy: {
@@ -242,7 +242,7 @@ function main(){
         qDimensions:[{
             qDef:{
               qFieldDefs:[
-                "media_badge_image_sm"
+                "[Badge Image Small]"
               ]
             }
         }],
