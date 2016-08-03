@@ -4,7 +4,7 @@ var express = require('express'),
 app.use('/resources', express.static(__dirname + '/resources'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
-app.use("/dashboard", function(req, res){
+app.use("/main", function(req, res){
   console.log('loading dashboard');
   res.sendFile(__dirname+"/main.html");
 });
