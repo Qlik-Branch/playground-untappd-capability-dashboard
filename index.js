@@ -4,13 +4,11 @@ var express = require('express'),
 app.use('/resources', express.static(__dirname + '/resources'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
-app.use("/main", function(req, res){
-  console.log('loading dashboard');
+app.use("/main", function(req, res){  
   res.sendFile(__dirname+"/main.html");
 });
 
 app.use("/", function(req, res){
-  console.log('loading index');
   res.sendFile(__dirname+"/index.html");
 });
 
