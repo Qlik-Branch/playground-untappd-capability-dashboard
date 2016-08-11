@@ -89,7 +89,7 @@ function main(){
     }
 
     //using the capability api we create a new 'qsSimpleKPI' object
-    app.createGenericObject(dbDef).then(function(model){
+    app.createGenericObject(dbrDef).then(function(model){
       app.getObject("distinctBreweries", model.id);
     });
 
